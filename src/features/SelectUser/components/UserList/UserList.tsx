@@ -4,6 +4,14 @@ import useUsers from "../../hooks/useUsers.ts";
 import {UserContext} from "../../../../shared/contexts/AppContext/UserContext.tsx";
 import {User} from "../../../../shared/types/User.ts";
 import UserItem from "./components/UserItem.tsx";
+import styled from "styled-components";
+
+
+const StyledUserListContainer = styled.div`
+    border: 1px solid black;
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+`;
 
 const UserList = () => {
     const users  = useUsers();
@@ -18,18 +26,18 @@ const UserList = () => {
 
     return (
         <>
-            <div>
-                <h2>User list</h2>
+            <StyledUserListContainer>
+                <p>User list</p>
                 { users.length > 0 ? (
-                <ul>
+                <div>
                     {users.map((user: User) => (
                         <UserItem key={user.id} user={user} handleClick={handleClick}/>
                     ))}
-                </ul>
+                </div>
                 ) : (
                      <p>There are no users.</p>
                 )}
-            </div>
+            </StyledUserListContainer>
         </>
     );
 };

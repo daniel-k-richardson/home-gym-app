@@ -18,6 +18,10 @@ const StyledSwitchUserButton = styled.button`
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         height: 2rem;
+    &:hover {
+        background-color: #fff;
+        color: #333;
+    }   
     `;
 
 const Header = () => {

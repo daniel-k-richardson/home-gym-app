@@ -5,6 +5,7 @@ import styled from "styled-components";
 const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
 `;
@@ -13,10 +14,13 @@ const StyledButton = styled(CreateButton)`
     background-color: white;
     color: black;
     border: 1px solid black;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    height: 2rem;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
 `;
 
 const SelectUserPage = () => {
